@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Velceron turns AI risk assessments into reviewable controls, evidence gaps, and governance packs." />
+  <title>Velceron — AI governance that ships</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Velceron home">
+      <span class="mark">V</span><span>Velceron</span>
+    </a>
+    <nav>
+      <a href="#product">Product</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#pilot">Pilot</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow">AI governance for teams that actually build</div>
+      <h1>Turn AI risk into controls people can review.</h1>
+      <p class="lede">Velceron converts a short AI-system assessment into a structured risk view, evidence gaps, control actions and a governance pack you can take into review.</p>
+      <div class="cta-row">
+        <a class="button primary" href="#assessment">Run the assessment</a>
+        <a class="button secondary" href="#product">See what it produces</a>
+      </div>
+      <div class="trust-row">
+        <span>No model upload required</span>
+        <span>Runs locally in your browser</span>
+        <span>Built for regulated environments</span>
+      </div>
+    </section>
+
+    <section id="product" class="shell section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">The output</div>
+          <h2>Less policy theatre. More evidence.</h2>
+        </div>
+        <p>Use Velceron to create a consistent first-pass record before legal, risk, security or architecture review.</p>
+      </div>
+      <div class="cards four">
+        <article class="card"><div class="num">01</div><h3>Risk classification</h3><p>Score the use case across autonomy, sensitive data, external impact and oversight.</p></article>
+        <article class="card"><div class="num">02</div><h3>Evidence gaps</h3><p>See which documents, tests and ownership records are missing before approval.</p></article>
+        <article class="card"><div class="num">03</div><h3>Control checklist</h3><p>Generate concrete controls for human review, monitoring, access, testing and incident response.</p></article>
+        <article class="card"><div class="num">04</div><h3>Governance pack</h3><p>Print or export a concise decision record with the reasoning preserved.</p></article>
+      </div>
+    </section>
+
+    <section id="assessment" class="assessment-wrap">
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Prototype</div>
+            <h2>AI risk assessment</h2>
+          </div>
+          <p>Answer ten questions. Velceron will generate a first-pass governance view. Nothing is sent to a server.</p>
+        </div>
+
+        <div class="app-grid">
+          <form id="riskForm" class="panel form-panel">
+            <label>System / use case name<input id="systemName" type="text" placeholder="e.g. Customer support copilot" required /></label>
+            <label>Owner<input id="owner" type="text" placeholder="e.g. Digital Service Team" /></label>
+
+            <fieldset><legend>1. Does the system make or materially influence decisions about people?</legend><div class="choice"><label><input type="radio" name="q1" value="0" required /> No</label><label><input type="radio" name="q1" value="2" /> Assists only</label><label><input type="radio" name="q1" value="4" /> Yes</label></div></fieldset>
+            <fieldset><legend>2. Does it handle personal, financial, health or other sensitive data?</legend><div class="choice"><label><input type="radio" name="q2" value="0" required /> No</label><label><input type="radio" name="q2" value="2" /> Limited</label><label><input type="radio" name="q2" value="4" /> Significant</label></div></fieldset>
+            <fieldset><legend>3. Can the AI take external actions such as sending, changing or deleting data?</legend><div class="choice"><label><input type="radio" name="q3" value="0" required /> No</label><label><input type="radio" name="q3" value="2" /> Restricted</label><label><input type="radio" name="q3" value="4" /> Broadly</label></div></fieldset>
+            <fieldset><legend>4. Is there meaningful human review before consequential output is used?</legend><div class="choice"><label><input type="radio" name="q4" value="4" required /> No</label><label><input type="radio" name="q4" value="2" /> Sometimes</label><label><input type="radio" name="q4" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>5. Are model limitations, intended use and prohibited use documented?</legend><div class="choice"><label><input type="radio" name="q5" value="3" required /> No</label><label><input type="radio" name="q5" value="1" /> Partly</label><label><input type="radio" name="q5" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>6. Have quality, bias, failure-mode or adversarial tests been recorded?</legend><div class="choice"><label><input type="radio" name="q6" value="3" required /> No</label><label><input type="radio" name="q6" value="1" /> Some</label><label><input type="radio" name="q6" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>7. Are inputs, outputs, model/version and key decisions traceable?</legend><div class="choice"><label><input type="radio" name="q7" value="3" required /> No</label><label><input type="radio" name="q7" value="1" /> Partly</label><label><input type="radio" name="q7" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>8. Is there an accountable business owner and technical owner?</legend><div class="choice"><label><input type="radio" name="q8" value="3" required /> No</label><label><input type="radio" name="q8" value="1" /> One only</label><label><input type="radio" name="q8" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>9. Is ongoing monitoring defined for drift, incidents and harmful outcomes?</legend><div class="choice"><label><input type="radio" name="q9" value="3" required /> No</label><label><input type="radio" name="q9" value="1" /> Partly</label><label><input type="radio" name="q9" value="0" /> Yes</label></div></fieldset>
+            <fieldset><legend>10. Can the system be paused, overridden or rolled back quickly?</legend><div class="choice"><label><input type="radio" name="q10" value="3" required /> No</label><label><input type="radio" name="q10" value="1" /> With effort</label><label><input type="radio" name="q10" value="0" /> Yes</label></div></fieldset>
+
+            <button class="button primary full" type="submit">Generate governance view</button>
+          </form>
+
+          <aside class="panel result-panel" id="results" aria-live="polite">
+            <div class="result-empty" id="emptyState">
+              <div class="risk-orb">V</div>
+              <h3>Your governance view appears here.</h3>
+              <p>Complete the assessment to produce a score, gaps and control checklist.</p>
+            </div>
+
+            <div id="resultContent" hidden>
+              <div class="result-top">
+                <div>
+                  <div class="eyebrow">Assessment result</div>
+                  <h3 id="resultName">System</h3>
+                </div>
+                <div class="scorebox"><strong id="score">0</strong><span>/ 34</span></div>
+              </div>
+              <div id="riskBadge" class="risk-badge">Low</div>
+              <p id="riskSummary" class="summary"></p>
+
+              <div class="result-section"><h4>Evidence gaps</h4><ul id="gaps"></ul></div>
+              <div class="result-section"><h4>Recommended controls</h4><ul id="controls"></ul></div>
+              <div class="result-section"><h4>Decision record</h4><div id="decision" class="decision"></div></div>
+
+              <div class="result-actions">
+                <button class="button secondary" id="printBtn" type="button">Print governance pack</button>
+                <button class="button secondary" id="jsonBtn" type="button">Export JSON</button>
+              </div>
+              <p class="fineprint">Prototype decision support only. It does not replace legal, regulatory, security or risk review.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="pilot" class="shell section pilot">
+      <div>
+        <div class="eyebrow">Design partner pilot</div>
+        <h2>Bring one real AI use case.</h2>
+        <p>We’ll map the current review workflow, run the use case through Velceron, identify evidence gaps and produce a governance pack your team can critique.</p>
+      </div>
+      <div class="pilot-card">
+        <strong>Best fit</strong>
+        <p>Regulated teams, enterprise AI programs, investors and technical diligence teams.</p>
+        <a class="button primary full" href="https://buy.stripe.com/aFacN5dpiek7ak9dGV0sU00" target="_blank" rel="noopener">Start a paid pilot</a>
+        <a class="text-link" href="mailto:kiravanklein@gmail.com?subject=Velceron%20pilot">Ask a question first →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <div><strong>Velceron</strong><br><span>A product of Klein Consulting Ltd.</span></div>
+    <div>© 2026 Klein Consulting Ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
